@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader" class="loader-container">
+        <div class="lotus-icon">V & A</div>
+        <p>Loading your invitation...</p>
+    </div>
+
+    <div id="main-invite" class="invite-container hidden">
+        
+        <div class="exclusive-tag">EXCLUSIVE INVITATION FOR</div>
+        <h2 class="guest-name">V & A<br> Wedding</h2>
+
+        
+        <div class="divider">TOGETHER WITH THEIR FAMILIES</div>
+
+        <div class="couples-container">
+            <div class="couple">
+                <h3>Achamma Mathews</h3>
+                <span class="ampersand">&</span>
+                <h3>Mathews.K.George</h3>
+            </div>
+            <div class="couple">
+                <h3>Kavitha Biju</h3>
+                <span class="ampersand">&</span>
+                <h3>Biju John</h3>
+            </div>
+        </div>
+
+        <p class="request-text">REQUEST THE HONOR OF YOUR PRESENCE</p>
+
+        <div class="date-time-box">
+            <div class="date-left">
+                <span class="month">NOVEMBER</span>
+                <span class="year">2026, Monday</span>
+            </div>
+            <div class="date-center">2</div>
+            <div class="time-right">5 PM</div>
+        </div>
+
+        <div class="location-box">
+            <h4>The Mar Thoma Church, Sharjah</h4>
+            <p>Followed by reception at <br> Majestic Hall by Ramada, Ajman</p>
+        </div>
+
+        <div class="countdown-container">
+            <p class="countdown-title">COUNTDOWN TO RECEPTION</p>
+            <div class="countdown-timer">
+                <div class="time-box"><span id="days">00</span><small>DAYS</small></div>
+                <div class="time-box"><span id="hours">00</span><small>HOURS</small></div>
+                <div class="time-box"><span id="mins">00</span><small>MINS</small></div>
+                <div class="time-box"><span id="secs">00</span><small>SECS</small></div>
+            </div>
+        </div>
+
+        <div class="exclusive-tag">YOU ARE INVITED</div>
+        <h2 class="guest-name">To Celebrate With Us</h2>
+        
+        <div id="rsvp-step-1" class="rsvp-section">
+            <p class="rsvp-title" style="margin-bottom: 10px;">PLEASE ENTER YOUR NAME</p>
+            <input type="text" id="primary-guest-name" class="guest-name-input" placeholder="Your Name" style="margin-bottom: 20px;">
+            
+            <p class="rsvp-title">WILL YOU ATTEND?</p>
+            <div class="btn-row">
+                <button class="btn btn-yes" onclick="showGuestCount()">✔️ Yes, I'll be there!</button>
+                <button class="btn btn-no" onclick="submitNo()">❌ Unfortunately, I can't make it</button>
+            </div>
+        </div>
+
+        <div id="rsvp-step-2" class="rsvp-section hidden">
+            <h3 class="wonderful-text">Wonderful!</h3>
+            
+            <p id="details-for-name" class="details-for"></p>
+            
+            <p class="question">How many family members will attend?</p>
+            
+            <div class="counter">
+                <button onclick="updateCount(-1)">−</button>
+                <span id="guest-count">1</span>
+                <button onclick="updateCount(1)">+</button>
+            </div>
+            <p class="including-text">INCLUDING YOURSELF</p>
+
+            <div id="guest-names-container"></div>
+
+            <button class="btn-submit" onclick="submitRSVP()">SUBMIT RSVP</button>
+        </div>
+
+        <div id="rsvp-success" class="rsvp-section hidden">
+    <div class="success-icon">✨</div>
+    <div id="success-content">
+        </div>
+    
+    <div id="location-buttons" class="hidden" style="margin-top: 20px;">
+        <button class="btn-location" onclick="openMap('church')">📍 CHURCH LOCATION</button>
+        <button class="btn-location" onclick="openMap('reception')">🏨 RECEPTION LOCATION</button>
+    </div>
+</div>
+
+    </div>
+
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
