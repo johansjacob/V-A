@@ -569,9 +569,10 @@ body {
 }
 
 /* Balances the height of the time side to match the date side */
+/* Creates an invisible block above the time to balance the height of 'NOV' */
 .time-side::before {
-    content: '\00a0'; /* Adds an invisible non-breaking space */
+    content: '\00a0'; 
     display: block;
     font-size: 0.95rem; /* Matches the font size of .text-sub */
-    margin: 5px 0;      /* Matches the margins of .text-sub */
+    margin: 0;
 }
