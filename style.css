@@ -549,10 +549,11 @@ body {
 .text-main {
     display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 3rem; /* Large numbers */
-    line-height: 0.9; /* Tightens the spacing around the number */
+    font-size: 3rem;
+    line-height: 0.9;
     font-weight: 600;
     color: var(--text-dark);
+    margin: 8px 0; /* Adds exactly 8px of space above and below */
 }
 
 .text-sub {
@@ -561,8 +562,9 @@ body {
     letter-spacing: 5px;
     color: var(--text-light);
     text-transform: uppercase;
-    margin: 0; /* Changed from 5px 0 to remove the extra space */
+    margin: 0; /* Keeps the spacing strictly controlled by .text-main */
 }
+
 /* Balances the height of the time side to match the date side */
 .time-side::before {
     content: '\00a0'; /* Adds an invisible non-breaking space */
