@@ -520,3 +520,45 @@ body {
     .text-large { font-size: 2.2rem; }
     .text-upper { font-size: 1rem; letter-spacing: 2px; }
 }
+
+.date-time-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    margin: 30px 0;
+    /* Optional: uncomment if you want top/bottom border */
+    /* border-top: 1px solid var(--border-color); 
+       border-bottom: 1px solid var(--border-color); */
+}
+
+.date-side, .time-side {
+    width: 100px; /* Fixed width ensures perfect centering around the line */
+    text-align: center;
+}
+
+.vertical-divider {
+    width: 1px;
+    height: 80px;
+    background-color: var(--accent-green);
+    margin: 0 15px; /* Space between the line and the text */
+    opacity: 0.5;
+}
+
+.text-main {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem; /* Large numbers */
+    line-height: 1;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.text-sub {
+    display: block;
+    font-size: 0.9rem;
+    letter-spacing: 4px;
+    color: var(--text-light);
+    text-transform: uppercase;
+    margin: 4px 0;
+}
