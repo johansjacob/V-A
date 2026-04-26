@@ -549,11 +549,14 @@ body {
 .text-main {
     display: block;
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    line-height: 0.9;
+    font-size: 3rem; 
+    line-height: 0.9; 
     font-weight: 600;
     color: var(--text-dark);
-    margin: 8px 0; /* Adds exactly 8px of space above and below */
+    
+    /* Add these optical adjustments: */
+    margin-top: -10px;  /* Pulls the number up closer to NOV */
+    margin-bottom: 5px; /* Pushes 2026/PM further down */
 }
 
 .text-sub {
@@ -562,7 +565,7 @@ body {
     letter-spacing: 5px;
     color: var(--text-light);
     text-transform: uppercase;
-    margin: 0; /* Keeps the spacing strictly controlled by .text-main */
+    margin: 0; /* Keep this at 0 */
 }
 
 /* Balances the height of the time side to match the date side */
