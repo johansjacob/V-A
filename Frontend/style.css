@@ -469,3 +469,54 @@ body {
     background: var(--accent-green);
     color: white;
 }
+
+.date-time-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    margin: 20px 0;
+    border-top: 1.5px solid var(--border-color);
+    border-bottom: 1.5px solid var(--border-color);
+}
+
+.date-col, .time-col {
+    flex: 1;
+    text-align: center;
+}
+
+.divider-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px; /* Adjust height of the vertical line */
+}
+
+.vertical-line {
+    width: 1px;
+    height: 100%;
+    background-color: var(--border-color);
+}
+
+.text-large {
+    display: block;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1;
+    font-weight: 600;
+    margin: 8px 0;
+}
+
+.text-upper {
+    display: block;
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: var(--text-light);
+}
+
+/* Responsive adjustment */
+@media (max-width: 400px) {
+    .text-large { font-size: 2.2rem; }
+    .text-upper { font-size: 1rem; letter-spacing: 2px; }
+}
